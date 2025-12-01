@@ -360,7 +360,7 @@ export const MockData: Data = {
 			},
 			{
 				name: "France",
-				cities: ["Madrid", "Barcelona", "Paris"],
+				cities: ["Marsilie", "Bordeux", "Paris"],
 			},
 			{
 				name: "England",

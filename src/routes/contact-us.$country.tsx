@@ -1,9 +1,9 @@
 import { getCities } from "@/lib/mock";
 import {
-	createFileRoute,
-	Link,
-	notFound,
-	Outlet,
+  createFileRoute,
+  Link,
+  notFound,
+  Outlet,
 } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/contact-us/$country")({
