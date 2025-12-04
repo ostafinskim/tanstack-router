@@ -13,6 +13,7 @@ function RootComponent() {
       <NavLink to="/about">About page</NavLink>
       <NavLink to="/contact-us">Contact us</NavLink>
       <NavLink to="/categories">Categories</NavLink>
+      <NavLink to="/search">Search</NavLink>
       </div>
       <Outlet />
     </div>
