@@ -1,10 +1,19 @@
 import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { useRouterContextState } from "./lib/use-router-context-state";
 import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({
   routeTree,
   defaultPendingMs: 0,
-  defaultPreload: 'intent'
+  defaultPreload: 'intent',
+  context: {
+    role: null,
+    login: () => {},
+    logout: () => {},
+    isAdmin: false,
+    isClient: false,
+    isAuthenticated: false
+  }
 })
 
 declare module "@tanstack/react-router" {
@@ -14,5 +23,6 @@ declare module "@tanstack/react-router" {
 }
 
 export default function App() {
-  return <RouterProvider router={router} />
+  const routerContextState = useRouterContextState()
+  return <RouterProvider router={router} context={routerContextState} />
 }
